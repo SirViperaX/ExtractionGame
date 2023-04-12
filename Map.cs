@@ -36,7 +36,9 @@ namespace ExtractionGame
             for (int i = 0; i < tiles.GetLength(0); i++)
             {
                 for (int j = 0; j < tiles.GetLength(1); j++)
-                    tiles[i, j].Draw(handler);        
+                {
+                    tiles[i, j].Draw(handler);
+                }        
             }
         }
         public void SetRobot(Robot r,int i, int j)

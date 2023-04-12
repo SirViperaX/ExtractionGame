@@ -25,6 +25,7 @@ namespace ExtractionGame
             Robot T5 = new Transporter();
             map.SetRobot(T5, 4, 4);
             map.SetCrystals(new Point(7, 9), 20, 5, 1);
+            map.SetCrystals(new Point(1, 3), 200, 5, 100);
         }
 
         public static PointF[] RegularPolygon(PointF absLocation, float radius, int n, float rotAngle)
@@ -36,6 +37,19 @@ namespace ExtractionGame
                 float x = absLocation.X + radius * (float) Math.Cos(i * alpha + rotAngle);
                 float y = absLocation.Y + radius * (float) Math.Sin(i * alpha + rotAngle);
                 toR[i]= new PointF(x,y);
+            }
+            return toR;
+        }
+
+        public static PointF[] RegularPolygon(PointF absLocation, float radiusX, float radiusY, int n, float rotAngle)
+        {
+            float alpha = (float)(Math.PI * 2 / n);
+            PointF[] toR = new PointF[n];
+            for (int i = 0; i < n; i++)
+            {
+                float x = absLocation.X + radiusX * (float)Math.Cos(i * alpha + rotAngle);
+                float y = absLocation.Y + radiusY * (float)Math.Sin(i * alpha + rotAngle);
+                toR[i] = new PointF(x, y);
             }
             return toR;
         }
