@@ -16,8 +16,8 @@ namespace ExtractionGame
         public override void Draw(Graphics handler)
         {
             int size = 7;
-            handler.FillEllipse(Brushes.Black, mapLocation.X - size, mapLocation.Y - size, 2 * size + 1, 2 * size + 1);
-            handler.DrawEllipse(Pens.Black, mapLocation.X - size, mapLocation.Y - size, 2 * size + 1, 2 * size + 1);
+            handler.FillEllipse(Brushes.Purple, absLocation.X - size, absLocation.Y - size, 2 * size + 1, 2 * size + 1);
+            handler.DrawEllipse(Pens.Black, absLocation.X - size, absLocation.Y - size, 2 * size + 1, 2 * size + 1);
         }
     }
 }

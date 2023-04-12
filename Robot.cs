@@ -10,6 +10,7 @@ namespace ExtractionGame
     public abstract class Robot
     {
         public PointF mapLocation;
+        public PointF absLocation;
         public Robot()
         {
 
@@ -19,7 +20,7 @@ namespace ExtractionGame
             mapLocation = toSet;
         }
         public abstract void Draw(Graphics handler);
-
+        
 
     }
 }
